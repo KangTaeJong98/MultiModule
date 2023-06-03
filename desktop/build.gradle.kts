@@ -1,37 +1,14 @@
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
-
 plugins {
-    kotlin("multiplatform")
-    id("org.jetbrains.compose")
+    kotlin("jvm").version("1.8.0")
+    id("org.jetbrains.compose").version("1.4.0")
 }
 
-group = "com.bravepeople.devevent"
-version = "1.0-SNAPSHOT"
-
-
-kotlin {
-    jvm {
-        jvmToolchain(11)
-        withJava()
-    }
-    sourceSets {
-        val jvmMain by getting {
-            dependencies {
-                implementation(project(":common"))
-                implementation(compose.desktop.currentOs)
-            }
-        }
-        val jvmTest by getting
-    }
+dependencies {
+    implementation(compose.desktop.currentOs)
 }
 
 compose.desktop {
     application {
-        mainClass = "MainKt"
-        nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "DevEvent-Multi"
-            packageVersion = "1.0.0"
-        }
+        mainClass = "com.bravepeople.devevent.desktop.MainKt"
     }
 }
