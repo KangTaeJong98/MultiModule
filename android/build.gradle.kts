@@ -1,37 +1,19 @@
 plugins {
     id("org.jetbrains.compose")
-    id("com.android.application")
-    kotlin("android")
+    id("event.android.app")
 }
 
-group = "com.bravepeople.devevent"
-version = "1.0-SNAPSHOT"
+android {
+    namespace = "${Build.NAMESPACE}.android"
 
-repositories {
-    jcenter()
+    defaultConfig {
+        applicationId = "${Build.NAMESPACE}.android"
+        versionCode = 10000
+        versionName = "1.0.0"
+    }
 }
 
 dependencies {
     implementation(project(":common"))
-    implementation("androidx.activity:activity-compose:1.5.0")
-}
-
-android {
-    compileSdkVersion(33)
-    defaultConfig {
-        applicationId = "com.bravepeople.devevent.android"
-        minSdkVersion(24)
-        targetSdkVersion(33)
-        versionCode = 1
-        versionName = "1.0-SNAPSHOT"
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
-        }
-    }
+    implementation("androidx.activity:activity-compose:1.7.2")
 }

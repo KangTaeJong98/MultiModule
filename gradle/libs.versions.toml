@@ -1,0 +1,8 @@
+[versions]
+kotlin-core = "1.8.20"
+
+android-gradle = "7.4.0"
+
+[libraries]
+gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin-core" }
+gradle-android = { group = "com.android.tools.build", name = "gradle", version.ref = "android-gradle" }

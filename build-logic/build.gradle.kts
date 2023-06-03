@@ -8,15 +8,21 @@ java {
 }
 
 kotlin {
+    jvmToolchain(17)
+
     explicitApi()
 }
 
 dependencies {
-
+    implementation(libs.gradle.kotlin)
+    implementation(libs.gradle.android)
 }
 
 gradlePlugin {
     plugins {
-
+        register("event.android.app") {
+            id = "event.android.app"
+            implementationClass = "plugin.android.AndroidAppPlugin"
+        }
     }
 }
