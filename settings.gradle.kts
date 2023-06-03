@@ -18,5 +18,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "DevEvent-Multi"
 
-include(":android")
-include(":desktop")
+include(":desktop", ":android")
+include(":feature:app")

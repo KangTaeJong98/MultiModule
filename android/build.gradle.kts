@@ -1,6 +1,6 @@
 plugins {
-    id("org.jetbrains.compose").version("1.4.0")
     id("event.android.app")
+    id("org.jetbrains.compose").version("1.4.0")
 }
 
 android {
@@ -14,6 +14,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":feature:app"))
+    
     implementation(libs.android.material)
     implementation(libs.android.compose.activity)
 }
