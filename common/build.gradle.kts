@@ -1,11 +1,8 @@
 plugins {
     kotlin("multiplatform")
     id("org.jetbrains.compose")
-    id("com.android.library")
+    id("event.android.lib")
 }
-
-group = "com.bravepeople.devevent"
-version = "1.0-SNAPSHOT"
 
 kotlin {
     android()
@@ -46,14 +43,5 @@ kotlin {
 }
 
 android {
-    compileSdkVersion(33)
-    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
-    defaultConfig {
-        minSdkVersion(24)
-        targetSdkVersion(33)
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
+    namespace = "${Build.NAMESPACE}.common"
 }

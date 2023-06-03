@@ -24,5 +24,10 @@ gradlePlugin {
             id = "event.android.app"
             implementationClass = "plugin.android.AndroidAppPlugin"
         }
+
+        register("event.android.lib") {
+            id = "event.android.lib"
+            implementationClass = "plugin.android.AndroidLibPlugin"
+        }
     }
 }
