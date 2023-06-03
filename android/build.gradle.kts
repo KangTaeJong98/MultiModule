@@ -14,5 +14,6 @@ android {
 }
 
 dependencies {
-    implementation("androidx.activity:activity-compose:1.7.2")
+    implementation(libs.android.material)
+    implementation(libs.android.compose.activity)
 }

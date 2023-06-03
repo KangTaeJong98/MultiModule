@@ -2,7 +2,13 @@
 kotlin-core = "1.8.20"
 
 android-gradle = "7.4.0"
+android-material = "1.9.0"
+android-activity = "1.7.2"
 
 [libraries]
 gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin-core" }
 gradle-android = { group = "com.android.tools.build", name = "gradle", version.ref = "android-gradle" }
+
+android-material = { group = "com.google.android.material", name = "material", version.ref = "android-material" }
+
+android-compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "android-activity" }
