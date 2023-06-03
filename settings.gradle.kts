@@ -20,3 +20,4 @@ rootProject.name = "DevEvent-Multi"
 
 include(":desktop", ":android")
 include(":feature:app")
+include(":navigation")

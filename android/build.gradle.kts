@@ -14,8 +14,10 @@ android {
 }
 
 dependencies {
+    implementation(project(":navigation"))
     implementation(project(":feature:app"))
-    
+
     implementation(libs.android.material)
-    implementation(libs.android.compose.activity)
+    implementation(libs.android.activity.compose)
+    implementation(libs.android.navigation.compose)
 }

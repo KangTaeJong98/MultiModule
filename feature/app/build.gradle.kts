@@ -11,8 +11,11 @@ kotlin {
     }
 
     sourceSets {
-        val commonMain by getting {
+        maybeCreate("commonMain")
+        getByName("commonMain") {
             dependencies {
+                implementation(project(":navigation"))
+
                 api(compose.ui)
                 api(compose.runtime)
             }
