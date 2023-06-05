@@ -15,15 +15,15 @@ kotlin {
         getByName("commonMain") {
             dependencies {
                 implementation(project(":navigation"))
-                implementation(project(":feature:main"))
 
                 api(compose.ui)
                 api(compose.runtime)
+                api(compose.material3)
             }
         }
     }
 }
 
 android {
-    namespace = "${Build.NAMESPACE}.feature.app"
+    namespace = "${Build.NAMESPACE}.feature.main"
 }
